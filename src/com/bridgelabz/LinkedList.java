@@ -21,4 +21,34 @@ public class LinkedList {
             temp = temp.next;
         }
     }
+
+    public void push(int data){
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
+        }
+    }
+
+    public void insertAfter(int prevData, int data){
+        Node newNode = new Node(data);
+        Node searchedNode = this.search(prevData);
+        if (searchedNode != null){
+            newNode.next = searchedNode.next;
+            searchedNode.next = newNode;
+        }
+    }
+
+    public Node search(int data){
+        Node temp = head;
+        while (temp != null){
+            if (temp.key == data)
+                return temp;
+            temp = temp.next;
+        }
+        return null;
+    }
 }
