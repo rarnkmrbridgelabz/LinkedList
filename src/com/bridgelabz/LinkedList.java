@@ -21,15 +21,4 @@ public class LinkedList {
             temp = temp.next;
         }
     }
-
-    public void push(int data){
-        Node newNode = new Node(data);
-        if (head == null) {
-            head = newNode;
-            tail = newNode;
-        } else {
-            newNode.next = head;
-            head = newNode;
-        }
-    }
 }
