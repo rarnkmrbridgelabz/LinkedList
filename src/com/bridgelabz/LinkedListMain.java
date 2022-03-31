@@ -5,8 +5,10 @@ public class LinkedListMain {
         LinkedList list = new LinkedList();
         list.add(56);
         list.add(30);
+        list.add(40);
         list.add(70);
-        list.insertAfter(30, 40);
+        list.delete(40);
+        list.size();
         list.display();
     }
 }
